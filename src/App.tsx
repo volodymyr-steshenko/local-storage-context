@@ -54,8 +54,6 @@ const WithoutContextComponent = () => {
 
   return (
       <div>
-        {/*Without context*/}
-        {/*<div>Volume: {settings?.volume}</div>*/}
       </div>
   )
 }

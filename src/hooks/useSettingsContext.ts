@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import {Ctx} from '../SettingsContext';
-import {StorageValueTypes} from '../types';
+import {StorageValueTypes, UseSettingsContextType} from '../types';
 
-export const useSettingsContext = (keyStorage: string): [StorageValueTypes, (valueData: StorageValueTypes) => void]  => {
+export const useSettingsContext = (keyStorage: string): UseSettingsContextType  => {
   const {values = {}, isContext, setters} = useContext(Ctx);
 
   const setValue = (valueData: StorageValueTypes) => {

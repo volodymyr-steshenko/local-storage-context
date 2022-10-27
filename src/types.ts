@@ -1,7 +1,7 @@
 export type StorageValueTypes = string | number | boolean;
 export type StorageType = Record<string, StorageValueTypes>;
 export type SettersType = Record<string, (value: StorageValueTypes) => void>;
-export type UseSettingsContextType = number;
+export type UseSettingsContextType = [StorageValueTypes, (valueData: StorageValueTypes) => void];
 
 export interface CreateContextInterface {
   values?: StorageType;

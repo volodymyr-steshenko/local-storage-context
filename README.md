@@ -9,6 +9,7 @@
 ## Task description
 
 ###Challenge:
+
 Create a hook to store a state variable to local storage. 
 
 This state variable should be loaded upon every startup, and updated with every change when the app is running.
