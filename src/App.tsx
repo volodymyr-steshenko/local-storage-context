@@ -25,13 +25,13 @@ function App() {
 const WithContextComponent = () => {
   const [volume] = useSettingsContext('volume');
   const [currentSong] = useSettingsContext('currentSong');
-  const [analiticsOn] = useSettingsContext('analiticsOn');
+  const [analyticsOn] = useSettingsContext('analyticsOn');
 
   return (
       <div>
         <div>Volume: {volume}</div>
         <div>Current song: {currentSong}</div>
-        <div>Analitics on: {analiticsOn ? 'true' : 'false'}</div>
+        <div>analytics on: {analyticsOn ? 'true' : 'false'}</div>
       </div>
   )
 }
