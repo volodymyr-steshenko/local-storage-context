@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './App.css';
 import {SettingsContext} from "./SettingsContext";
 import {useSettingsContext} from './hooks/useSettingsContext';
-import {useLocalStorage} from './hooks/useLocalStorage';
 
 const initialSettings = {
   volume: 10,
@@ -24,15 +23,9 @@ function App() {
 }
 
 const WithContextComponent = () => {
-  const [volume, setVolume] = useSettingsContext('volume');
+  const [volume] = useSettingsContext('volume');
   const [currentSong] = useSettingsContext('currentSong');
   const [analiticsOn] = useSettingsContext('analiticsOn');
-
-  useEffect(() => {
-    setTimeout(() => {
-      setVolume(100);
-    }, 3000);
-  }, [setVolume]);
 
   return (
       <div>
@@ -44,12 +37,12 @@ const WithContextComponent = () => {
 }
 
 const ChangeStorage = () => {
-  const [, setVolume] = useLocalStorage('volume', 30);
+  const [, setVolume] = useSettingsContext('volume');
 
   useEffect(() => {
     setTimeout(() => {
-      setVolume(100);
-    }, 3000);
+      setVolume(1000);
+    }, 6000);
   }, [setVolume]);
 
   return null;
